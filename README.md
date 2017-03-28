@@ -1,1 +1,1 @@
-#A starter boilerplate for web frontend development
+# A starter boilerplate for web frontend development
