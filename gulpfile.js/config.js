@@ -14,6 +14,7 @@ module.exports = {
 
     sass  : path.join(source, 'scss'),
     svg   : path.join(source, 'svg'),
+    js    : path.join(source, 'js'),
     views : path.join('.', 'core'),
     css   : path.join(dist, 'css'),
     images: path.join(dist, 'images')

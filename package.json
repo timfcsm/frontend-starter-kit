@@ -17,15 +17,20 @@
   },
   "homepage": "https://github.com/timfcsm/frontend-starter-kit#readme",
   "devDependencies": {
+    "babelify": "^7.3.0",
     "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
     "critical": "^0.8.4",
     "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-parker": "^0.1.4",
     "gulp-pleeease": "^2.0.2",
     "gulp-sass": "^3.1.0",
     "gulp-size": "^2.1.0",
     "gulp-sourcemaps": "^2.5.0",
     "gulp-util": "^3.0.8",
-    "sass-module-importer": "^1.4.0"
+    "sass-module-importer": "^1.4.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
