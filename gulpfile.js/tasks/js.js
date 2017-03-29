@@ -1,19 +1,19 @@
-
 const config = require("../config");
 
-const gulp       = require('gulp'),
-      $          = require('gulp-load-plugins')(),
-      browserify = require('browserify'),
-      babelify   = require('babelify'),
-      buffer     = require('vinyl-buffer'),
-      source     = require('vinyl-source-stream');
+const gulp       = require('gulp');
+const $          = require('gulp-load-plugins')();
+const browserify = require('browserify');
+const babelify   = require('babelify');
+const buffer     = require('vinyl-buffer');
+const source     = require('vinyl-source-stream');
+const bs         = require('browser-sync').get('main');
 
 
-gulp.task('js', function (callback) {
+gulp.task('js', function () {
 
   const bundler = browserify({
-                               entries: config.paths.js + 'main.js',
-                               debug: !config.prod
+                               entries: config.paths.js + '/main.js',
+                               debug  : !config.prod
                              });
   bundler.transform(babelify.configure({
                                          presets: ["es2015"]
@@ -28,9 +28,9 @@ gulp.task('js', function (callback) {
                     }))
     .pipe(source('bundle.js'))
     .pipe(buffer())
-    .pipe($.sourcemaps.init({ loadMaps: true }))
+    .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.if(config.prod, $.uglify()))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest(options.dst))
-    .pipe(options.bs.stream());
+    .pipe(gulp.dest(config.paths.js_dist))
+    .pipe(bs.stream());
 });

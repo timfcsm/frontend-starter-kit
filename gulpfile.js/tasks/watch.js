@@ -1,13 +1,9 @@
 const gulp            = require("gulp");
 const path            = require("path");
 const bs              = require('browser-sync').create('main');
-const webpack         = require('webpack');
 const config          = require("../config");
-const webpackCallback = require('./js');
-const webpackConfig   = require('../../webpack/webpack.config.dev');
 
 gulp.task('watch', ['build'], function () {
-  webpackConfig.watch = true;
 
   bs.init({
             server: 'public'
