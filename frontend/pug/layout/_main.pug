@@ -1,0 +1,23 @@
+include ../bemto/index
+include ../inc/_vars
+include ../mixins/_index
+
+doctype html
+html(lang="ru")
+    block vars
+    head
+        title Hello
+        include ../inc/_meta
+        include ../inc/_styles
+        //include ../inc/_favicons
+    body#layout_body(data-slideout-closed="true")
+        include ../inc/_svg
+        .site-body
+            #app.site-content
+                include _header
+                main.main-content
+                    if page !== 'index'
+                        include ../blocks/_crumbs
+                    block content
+            include _footer
+            include ../inc/_scripts

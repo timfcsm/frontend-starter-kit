@@ -1,0 +1,18 @@
+//- Tabs
+mixin tab-list(tabs,active)
+    +b.tabs
+        +e.nav
+            .container
+                +e.UL.nav-ul.nav.nav-tabs(role="tablist")
+                    each item,index in tabs
+                        +e.LI.tab.nav-item
+                            +e.A.tab-a.nav-link(href=`#tab${item[1]}`,role="tab",data-toggle="tab" class= (index === active) ? 'active' : '')= item[0]
+        +e.content.tab-content
+            block
+
+
+//- Tab pane
+mixin tab(id,active)
+    +b.tab-pane(id=`tab${id}` class= active ? 'active' : '')
+        +e.container
+            block

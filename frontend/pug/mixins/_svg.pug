@@ -1,0 +1,4 @@
+mixin svg(name, viewBox)
+  svg.svg-icon(version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink",
+      xml:space="preserve" viewBox=viewBox)
+    use(xlink:href=`${skinImages}/sprite.svg#${name}`)

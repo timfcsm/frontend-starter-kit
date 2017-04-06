@@ -12,13 +12,17 @@ module.exports = {
     source: source,
     dist  : dist,
 
-    sass   : path.join(source, 'scss'),
-    svg    : path.join(source, 'svg'),
-    js     : path.join(source, 'js'),
-    views  : path.join(source, 'views'),
-    css    : path.join(dist, 'css'),
-    js_dist: path.join(dist, 'js'),
-    images : path.join(dist, 'images')
+    sass       : path.join(source, 'scss'),
+    pug        : path.join(source, 'pug'),
+    svg        : path.join(source, 'svg'),
+    js         : path.join(source, 'js'),
+    assets     : path.join(source, 'assets'),
+    views      : path.join(source, 'views'),
+    css        : path.join(dist, 'css'),
+    js_dist    : path.join(dist, 'js'),
+    images     : path.join(dist, 'images'),
+    assets_dist: path.join(dist, '..', 'assets'),
+    html       : path.join(dist, 'pages')
   },
 
   PlzOptions: {

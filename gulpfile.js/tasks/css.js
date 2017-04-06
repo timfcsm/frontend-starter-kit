@@ -43,7 +43,7 @@ gulp.task('critical:css', function (cb) {
                       base: 'core',
                       src: 'templates/index.html',
                       css: 'static/css/screen.css',
-                      dest: 'dist/index-critical.html',
+                      dest: 'public/index-critical.html',
                       minify: true,
                       ignore: ['@font-face', /url\(/, /djDebug/],
                       dimensions: [{
